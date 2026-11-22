@@ -1,0 +1,30 @@
+{
+  "base_model": "C:\\Users\\ASUS\\Doubao\\chats\\2026-11-21\\new-chat-5\\model-demo\\models\\models\\Qwen--Qwen2.5-0.5B-Instruct\\snapshots\\master",
+  "torch": "2.11.0+cu128",
+  "cuda_available": true,
+  "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "samples": 154,
+  "max_len": 512,
+  "lora": {
+    "r": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_modules": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj"
+    ]
+  },
+  "train": {
+    "lr": 0.0001,
+    "epochs": 3,
+    "batch_size": 1,
+    "grad_accum": 4,
+    "bf16": true
+  },
+  "train_secs": 327.32,
+  "peak_gpu_mem_mb": 1420.2,
+  "final_train_loss": 2.6,
+  "adapter_dir": "C:\\Users\\ASUS\\Doubao\\chats\\2026-11-21\\new-chat-5\\model-demo\\output\\lora_adapter"
+}
