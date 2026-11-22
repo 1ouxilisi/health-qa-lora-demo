@@ -1,0 +1,31 @@
+{
+  "model": "qwen2.5-0.5b-health-lora",
+  "base_model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "device": "NVIDIA GeForce RTX 5060 Laptop GPU (CUDA 12.8, bf16)",
+  "note": "warm 后本地推理实测；显存为整卡占用（含后台 Ollama 约 0.94GB），模型常驻约 1.0-1.1GB。",
+  "gpu_memory_mib": {"baseline_with_ollama": 1988, "after_infer": 2028},
+  "samples": [
+    {
+      "id": "chat-1795328855",
+      "messages": [
+        {"role": "system", "content": "你是健康管理助手，回答通用、保守，不替代医生诊断；提示异常及时就医。"},
+        {"role": "user", "content": "血压偏高日常饮食要注意什么？"}
+      ],
+      "content": "控制盐分摄入、减少加工食品和甜食，避免晚餐过饱、少饮水，规律测血压并记录。低钠、低脂的清淡饮食有助于平稳降压。若药物未控制或血压波动明显，应咨询医师调整方案。",
+      "finish_reason": "stop",
+      "usage": {"prompt_tokens": 40, "completion_tokens": 55},
+      "latency_sec": 7.48
+    },
+    {
+      "id": "chat-1795328872",
+      "messages": [
+        {"role": "system", "content": "你是健康管理助手，回答通用、保守，不替代医生诊断；提示异常及时就医。"},
+        {"role": "user", "content": "血糖偏高，适合做什么运动？需要注意什么？"}
+      ],
+      "content": "运动应循序渐进，避免剧烈或短时间内高强度运动。低强度有氧运动如快走、慢跑和瑜伽，中等强度的轻松散步，可增加心肺功能与耐力。注意餐后运动，以避免血糖波动。具体运动方案由专业医师根据个人情况制定。",
+      "finish_reason": "stop",
+      "usage": {"prompt_tokens": 43, "completion_tokens": 66},
+      "latency_sec": 6.79
+    }
+  ]
+}
